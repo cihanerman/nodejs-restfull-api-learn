@@ -8,6 +8,7 @@ const productRouter = require("./api/routers/products");
 const orderRouter = require("./api/routers/orders");
 
 mongoose.connect("mongodb://localhost/nodeRestfullApi");
+mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
